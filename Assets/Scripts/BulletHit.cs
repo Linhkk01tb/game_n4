@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletHit : MonoBehaviour
 {
+    public float weponDamage;
     projecttileController Pc;
     public GameObject bulletExpl;
    
@@ -32,6 +33,11 @@ public class BulletHit : MonoBehaviour
             Pc.RemoveBullet();
             Instantiate(bulletExpl, transform.position, transform.rotation);
             Destroy(gameObject);
+            if(other.gameObject.layer == LayerMask.NameToLayer("enemy"))
+            {
+                enemyHealth hurtEnemy = other.gameObject.GetComponent<enemyHealth>();
+                hurtEnemy.addDamage(weponDamage);
+            }
 
         }
     }
@@ -42,6 +48,11 @@ public class BulletHit : MonoBehaviour
             Pc.RemoveBullet();
             Instantiate(bulletExpl, transform.position, transform.rotation);
             Destroy(gameObject);
+            if (other.gameObject.layer == LayerMask.NameToLayer("enemy"))
+            {
+                enemyHealth hurtEnemy = other.gameObject.GetComponent<enemyHealth>();
+                hurtEnemy.addDamage(weponDamage);
+            }
         }
     }
 }

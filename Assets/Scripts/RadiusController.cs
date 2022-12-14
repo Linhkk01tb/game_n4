@@ -15,13 +15,14 @@ public class RadiusController : MonoBehaviour
 
     public Transform Muzzle;
     public GameObject bullet;
-    float firerate = 0.25f;
+    float firerate = 0.5f;
     float nextfire = 0f;
     // Start is called before the first frame update
     void Start()
     {
         RadiusBody = GetComponent<Rigidbody2D>();
         RadiusAnimator = GetComponent<Animator>();
+        
         facingRight = true;
     }
 

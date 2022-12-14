@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9056369906938633718}
   - component: {fileID: 9090947044636978816}
   - component: {fileID: 6583270610789334477}
-  - component: {fileID: 7912330140393406985}
   m_Layer: 0
   m_Name: Bullet_000
   m_TagString: Untagged
@@ -102,19 +101,6 @@ CircleCollider2D:
   m_Offset: {x: 0.24, y: 0}
   serializedVersion: 2
   m_Radius: 0.58
---- !u!114 &7912330140393406985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2681978770316772474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44187654347cf21459803b483cda9780, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletExpl: {fileID: 6810062201542071184, guid: 99e786f6cd2796f498156bc109a4d9a8, type: 3}
 --- !u!1 &7436374750962005841
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44187654347cf21459803b483cda9780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weponDamage: 10
   bulletExpl: {fileID: 6810062201542071184, guid: 99e786f6cd2796f498156bc109a4d9a8, type: 3}
 --- !u!114 &4400172785447833011
 MonoBehaviour:
@@ -211,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a276a00516e6f204d96ec3cb98e1956c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alive: 2
+  alive: 1
 --- !u!212 &1798070580303317119
 SpriteRenderer:
   m_ObjectHideFlags: 0
