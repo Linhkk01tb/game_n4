@@ -70,7 +70,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.8444176, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -81,7 +81,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5}
+  m_Size: {x: 11.688835, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &8306233683621985762
 MonoBehaviour:
@@ -175,11 +175,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6551854987358230236, guid: 9a560876016708e48a0b93e397cfa34d, type: 3}
       propertyPath: m_Radius
-      value: 0.244882
+      value: 0.32781217
       objectReference: {fileID: 0}
     - target: {fileID: 6551854987358230236, guid: 9a560876016708e48a0b93e397cfa34d, type: 3}
       propertyPath: m_Offset.x
       value: -0.015118022
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551854987358230236, guid: 9a560876016708e48a0b93e397cfa34d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08293018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551854987358230236, guid: 9a560876016708e48a0b93e397cfa34d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a560876016708e48a0b93e397cfa34d, type: 3}
@@ -193,21 +201,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6551854987358230230, guid: 9a560876016708e48a0b93e397cfa34d, type: 3}
   m_PrefabInstance: {fileID: 8306233682322879187}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8306233683407057613
-MonoBehaviour:
+--- !u!58 &5641596678269532051
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3002061345247372293}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb8d5501bc2648439e4017da0a9b6ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 20
-  bang: {fileID: 6810062201542071184, guid: 99e786f6cd2796f498156bc109a4d9a8, type: 3}
-  enemyHealthSlider: {fileID: 1288250190153217947}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.11}
+  serializedVersion: 2
+  m_Radius: 0.13965839
 --- !u!114 &8306233683407057609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +232,21 @@ MonoBehaviour:
   damage: 30
   pushBackForce: 10
   bang: {fileID: 6810062201542071184, guid: 99e786f6cd2796f498156bc109a4d9a8, type: 3}
+--- !u!114 &8306233683407057613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002061345247372293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb8d5501bc2648439e4017da0a9b6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  bang: {fileID: 6810062201542071184, guid: 99e786f6cd2796f498156bc109a4d9a8, type: 3}
+  enemyHealthSlider: {fileID: 1288250190153217947}
 --- !u!1001 &8306233683473403740
 PrefabInstance:
   m_ObjectHideFlags: 0

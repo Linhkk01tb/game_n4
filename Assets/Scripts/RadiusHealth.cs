@@ -9,19 +9,29 @@ public class RadiusHealth : MonoBehaviour
     float currentHealth;
     public GameObject bang;
     public Slider healthSlider;
+    public Image lose;
+    public Button lose_btn;
+    Rigidbody2D nhanvat;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
-        
+        nhanvat = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(nhanvat.velocity.y <= -10f)
+        {
+            Dead();
+            lose.gameObject.SetActive(true);
+            lose_btn.gameObject.SetActive(true);
+        }
+
     }
     public void addDamage(float dame)
     {
@@ -31,12 +41,14 @@ public class RadiusHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Dead();
-            Application.LoadLevel("MenuGame");
+            lose.gameObject.SetActive(true);
+            lose_btn.gameObject.SetActive(true);
         }
     }
     void Dead()
     {
         Instantiate(bang, transform.position, transform.rotation);
         Destroy(gameObject);
+        
     }
 }

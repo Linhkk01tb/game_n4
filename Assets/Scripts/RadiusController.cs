@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RadiusController : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class RadiusController : MonoBehaviour
     bool grounded; // check chân chạm đất
     Rigidbody2D RadiusBody;
     Animator RadiusAnimator;
+    public Image victory;
+    public Button vic;
 
     //súng đạn
 
@@ -99,5 +102,12 @@ public class RadiusController : MonoBehaviour
         {
             grounded = true;
         }
+        if(other.gameObject.tag == "flag")
+        {
+           
+          victory.gameObject.SetActive(true);
+            vic.gameObject.SetActive(true);
+        }
     }
+    
 }

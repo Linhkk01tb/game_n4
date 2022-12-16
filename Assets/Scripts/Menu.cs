@@ -23,4 +23,8 @@ public class Menu : MonoBehaviour
     {
         Application.LoadLevel("Level");
     }
+    public void loadStart()
+    {
+        Application.LoadLevel("MenuGame");
+    }
 }
