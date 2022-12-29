@@ -25,11 +25,12 @@ public class RadiusHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(nhanvat.velocity.y <= -10f)
+        if(nhanvat.velocity.y <= -20f)
         {
             Dead();
             lose.gameObject.SetActive(true);
             lose_btn.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
 
     }
@@ -43,6 +44,7 @@ public class RadiusHealth : MonoBehaviour
             Dead();
             lose.gameObject.SetActive(true);
             lose_btn.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
     void Dead()

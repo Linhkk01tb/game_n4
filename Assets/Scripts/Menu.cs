@@ -27,4 +27,13 @@ public class Menu : MonoBehaviour
     {
         Application.LoadLevel("MenuGame");
     }
+    public void exitGame()
+    {
+        Application.Quit();
+        
+    }
+    public void quitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
 }

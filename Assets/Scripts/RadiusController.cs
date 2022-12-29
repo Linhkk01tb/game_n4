@@ -11,8 +11,9 @@ public class RadiusController : MonoBehaviour
     bool grounded; // check chân chạm đất
     Rigidbody2D RadiusBody;
     Animator RadiusAnimator;
-    public Image victory;
-    public Button vic;
+    AudioSource ads;
+    //public Image victory;
+    //public Button vic;
 
     //súng đạn
 
@@ -20,12 +21,13 @@ public class RadiusController : MonoBehaviour
     public GameObject bullet;
     float firerate = 0.5f;
     float nextfire = 0f;
+    
     // Start is called before the first frame update
     void Start()
     {
         RadiusBody = GetComponent<Rigidbody2D>();
         RadiusAnimator = GetComponent<Animator>();
-        
+        ads = GetComponent<AudioSource>();
         facingRight = true;
     }
 
@@ -50,7 +52,7 @@ public class RadiusController : MonoBehaviour
             flip();
         }
 
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetAxisRaw("Jump") > 0)
         {
             if (grounded)
             {
@@ -64,7 +66,9 @@ public class RadiusController : MonoBehaviour
         if (Input.GetAxisRaw("Fire1") > 0)
         {
             firebullet();
+            ads.Play();
             RadiusAnimator.SetBool("shoot", true);
+            
         }
         else if (Input.GetAxisRaw("Fire1") <= 0)
         {
@@ -102,12 +106,10 @@ public class RadiusController : MonoBehaviour
         {
             grounded = true;
         }
-        if(other.gameObject.tag == "flag")
-        {
-           
-          victory.gameObject.SetActive(true);
-            vic.gameObject.SetActive(true);
-        }
+        //if (other.gameobject.tag == "flag")
+        //{
+            
+        //}
     }
-    
+
 }
