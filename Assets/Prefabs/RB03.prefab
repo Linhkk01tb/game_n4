@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb8d5501bc2648439e4017da0a9b6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 75
+  maxHealth: 40
   bang: {fileID: 6810062201542071184, guid: 99e786f6cd2796f498156bc109a4d9a8, type: 3}
   enemyHealthSlider: {fileID: 5002259656645986259}
 --- !u!4 &8186952876494025786 stripped

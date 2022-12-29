@@ -32,8 +32,8 @@ public class Menu : MonoBehaviour
         Application.Quit();
         
     }
-    public void quitGame()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-    }
+    //public void quitGame()
+    //{
+    //    UnityEditor.EditorApplication.isPlaying = false;
+    //}
 }
